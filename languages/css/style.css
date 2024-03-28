@@ -1,0 +1,714 @@
+/* -------------- GENERALE -------------- */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  cursor: auto;
+}
+
+:root {
+  --black-color: #000000;
+  --blue-color: #180830;
+  --white-color: #f7f8f3;
+  --transparent-white-color: #f7f8f334;
+  --green-color: #56e086;
+  --orange-color: #fe8235;
+  --pink-color: #fe7797;
+  --yellow-color: #fed83c;
+  --lightblue-color: #3571fe;
+}
+
+.pink-color {
+  color: var(--pink-color);
+}
+
+.lightblue-color {
+  color: var(--lightblue-color);
+}
+
+.orange-color {
+  color: var(--orange-color);
+}
+
+::selection {
+  background: transparent;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+@font-face {
+  font-family: "Genesys";
+  src: url("./../../assets/fonts/Genesys.ttf");
+}
+
+@font-face {
+  font-family: "Akony";
+  src: url("./../../assets/fonts/akony.otf");
+}
+
+@font-face {
+  font-family: "Unitblock";
+  src: url("./../../assets/fonts/Unitblock.ttf");
+}
+
+@font-face {
+  font-family: "Identidad";
+  src: url("./../../assets/fonts/Identidad-ExtraLight.otf");
+}
+
+html {
+  font-size: 10px;
+}
+
+/* -------------- LAPTOP SIZE-------------- */
+
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
+  background-color: var(--blue-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  margin: 0;
+  padding: 0;
+  width: 95%;
+  max-width: 95%;
+  height: auto;
+  min-height: 100%;
+  background-color: var(--blue-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* -------- Menù -------- */
+
+header.header {
+  order: 1;
+  width: 100%;
+  height: 9rem;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.1rem solid var(--transparent-white-color);
+}
+
+.logo {
+  width: auto;
+  height: auto;
+}
+
+.logo a {
+  font-size: 3rem;
+  font-family: "Genesys";
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+.logo a:hover {
+  cursor: default;
+}
+
+nav ul {
+  display: flex;
+  gap: 3rem;
+}
+
+nav ul li a {
+  color: var(--white-color);
+  font-size: 1.5rem;
+  font-family: "Identidad";
+}
+
+nav ul li a:hover {
+  cursor: pointer;
+}
+
+.nav-button {
+  color: var(--blue-color);
+  background: var(--white-color);
+  padding: 2rem 3rem;
+  border-radius: 2rem;
+}
+
+/* -------- Home Section -------- */
+
+.home-section {
+  order: 2;
+  width: 100%;
+  height: calc(100vh - 9rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  gap: 4rem;
+}
+
+.home-text-box {
+  width: 100%;
+  height: auto;
+  order: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.home-text {
+  text-transform: uppercase;
+  font-size: 6.2rem;
+  color: var(--white-color);
+  font-family: "Akony";
+}
+
+.home-talk-box {
+  order: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.talk-text {
+  background-color: var(--transparent-white-color);
+  border-radius: 2rem;
+  height: 15rem;
+  width: 68%;
+  padding: 3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.talk-text p {
+  color: var(--white-color);
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-family: "Identidad";
+}
+
+.talk-button {
+  width: 30%;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--green-color);
+  border-radius: 2rem;
+  padding: 3rem;
+}
+
+.talk-button:hover {
+  cursor: pointer;
+}
+
+.talk-button h1 {
+  text-decoration: underline;
+  font-family: "Unitblock";
+  font-size: 6.5rem;
+  color: var(--blue-color);
+}
+
+.talk-button:hover h1 {
+  cursor: pointer;
+}
+
+/* -------- About Section -------- */
+
+.about-section {
+  order: 3;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.about-text-box {
+  order: 1;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--orange-color);
+  border-radius: 2rem;
+  padding: 3.5rem;
+  gap: 3rem;
+}
+
+.about-button {
+  order: 1;
+  width: auto;
+  height: auto;
+  border-radius: 4rem;
+  border: 0.1rem solid var(--white-color);
+  padding: 1.5rem 3.5rem;
+}
+
+.about-button:hover {
+  cursor: pointer;
+}
+
+.about-button h2 {
+  color: var(--white-color);
+  font-size: 2rem;
+  font-family: "Identidad";
+}
+
+.about-button:hover h2 {
+  cursor: pointer;
+}
+
+.about-text {
+  order: 2;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.about-text p {
+  font-size: 5rem;
+  font-family: "Unitblock";
+  color: var(--white-color);
+}
+
+.about-experience-box {
+  order: 3;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 15rem);
+  gap: 2rem;
+}
+
+.about-experience {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.about-experience-text1 {
+  order: 1;
+  font-size: 5rem;
+  color: var(--blue-color);
+  font-family: "Unitblock";
+}
+
+.about-experience-text2 {
+  order: 2;
+  font-size: 2.5rem;
+  font-family: "Identidad";
+  color: var(--blue-color);
+}
+
+/* -------- Service Section -------- */
+
+.services-section {
+  order: 4;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.service-text-box {
+  width: 100%;
+  height: auto;
+  order: 1;
+}
+
+.service-text-box h1 {
+  font-size: 7.5rem;
+  color: var(--white-color);
+  font-family: "Unitblock";
+}
+
+.service-provided {
+  order: 2;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+.service-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.service-text {
+  width: 100%;
+  height: 28rem;
+  border-radius: 4rem;
+}
+
+.service-1 {
+  background-color: var(--lightblue-color);
+}
+
+.service-2 {
+  background-color: var(--yellow-color);
+}
+
+.service-3 {
+  background-color: var(--pink-color);
+}
+
+.service-button {
+  border-radius: 4rem;
+  border: 0.1rem solid var(--white-color);
+  background-color: var(--blue-color);
+  padding: 1.5rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-button:hover {
+  cursor: pointer;
+}
+
+.service-button h2 {
+  font-size: 2rem;
+  color: var(--white-color);
+  text-align: center;
+  font-family: "Identidad";
+}
+
+.service-button:hover h2 {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1100px) {
+  .main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  /* .section {
+    width: 90%;
+    margin: 0 auto;
+  } */
+
+  /* -------- Menù -------- */
+
+  header.header {
+    order: 1;
+    width: 90%;
+    background-color: var(--blue-color);
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100 !important;
+  }
+
+  #toggleMenu {
+    position: relative;
+    width: 9rem;
+    height: 9rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #toggleMenu::before {
+    content: "";
+    position: absolute;
+    width: 3.3rem;
+    height: 0.2rem;
+    background: var(--white-color);
+    transform: translateY(-0.5rem);
+    transition: 0.2s;
+  }
+
+  #toggleMenu::after {
+    content: "";
+    position: absolute;
+    width: 3.3rem;
+    height: 0.2rem;
+    background: var(--white-color);
+    transform: translateY(0.5rem);
+    transition: 0.2s;
+  }
+
+  #toggleMenu.active::before {
+    transform: translateY(0rem) rotate(45deg);
+  }
+
+  #toggleMenu.active::after {
+    transform: translateY(0rem) rotate(-45deg);
+  }
+
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: -30rem;
+    width: 26.5rem;
+    height: 100vh;
+    background: var(--blue-color);
+    transition: 0.2s;
+    border-right: 0.1rem solid var(--transparent-white-color);
+  }
+
+  #sidebar.active {
+    left: -2rem;
+  }
+
+  #sidebar ul {
+    display: block;
+    padding: 0 2rem;
+    margin-top: 9rem;
+    margin-left: 2rem;
+  }
+
+  #sidebar ul li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.7rem 0;
+  }
+
+  #sidebar ul li a {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    font-size: 1.9rem;
+    padding: 1rem 0;
+  }
+
+  .nav-button {
+    background: var(--blue-color);
+    color: var(--white-color);
+  }
+
+  .theme-toggle {
+    position: relative;
+    left: 0.9rem;
+  }
+
+  /* -------- Home Section -------- */
+
+  .home-section {
+    order: 2;
+    width: 90%;
+    position: relative;
+    top: 9rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5rem 0;
+    gap: 3rem;
+  }
+
+  .talk-text {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-text {
+    font-size: 2.7rem;
+    text-align: center;
+    line-height: 4rem;
+  }
+
+  .home-talk-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .talk-text {
+    order: 1;
+    padding: 3rem;
+  }
+
+  .talk-text p {
+    font-size: 2rem;
+    line-height: 4rem;
+  }
+
+  .talk-button {
+    order: 2;
+    height: 6rem;
+    width: 65%;
+  }
+
+  .talk-button h1 {
+    font-size: 3rem;
+  }
+
+  /* -------- About Section -------- */
+
+  .about-section {
+    order: 3;
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5rem 0;
+    gap: 3rem;
+  }
+
+  .about-text-box {
+    order: 1;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 3rem;
+  }
+
+  .about-button {
+    width: 100%;
+    height: auto;
+    padding: 1rem 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-button h2 {
+    font-size: 2rem;
+  }
+
+  .about-text {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .about-text p {
+    font-size: 3rem;
+    text-align: start;
+    line-height: 4rem;
+  }
+
+  .about-experience-box {
+    order: 2;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .about-experience {
+    padding: 3rem 0;
+  }
+
+  .about-experience:nth-child(1) {
+    order: 1;
+  }
+
+  .about-experience:nth-child(2) {
+    order: 3;
+  }
+
+  .about-experience:nth-child(3) {
+    order: 2;
+  }
+
+  .about-experience-text2 {
+    font-size: 2.2rem;
+  }
+
+  /* -------- Service Section -------- */
+
+  .service-section {
+    order: 4;
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5rem 0;
+    gap: 3rem;
+  }
+
+  .service-text-box {
+    order: 1;
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .service-text-box h1 {
+    font-size: 5rem;
+    text-align: start;
+  }
+
+  .service-provided {
+    display: none;
+    order: 2;
+  }
+}
